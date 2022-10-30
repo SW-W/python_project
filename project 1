@@ -56,12 +56,13 @@ b3.grid(row=3, column=3, pady=5, padx=5, sticky='W')
 def copy_data():
     wb1 = load_workbook(e1.get())
     wb2 = load_workbook(e2.get())
-    ws1 = wb1['Raw Data']
+    ws1 = wb1['Sheet name']
     data = []
-    data_needed = wb2.sheetnames[2:]
+    data_needed = wb2.sheetnames
+    # This for loop is to extract data from the sheets with values and save it in a list
     for sheet in data_needed:
         ws2 = wb2[sheet]
-        for row in ws2.iter_rows(min_row=85, min_col=2, values_only=True):
+        for row in ws2.iter_rows(min_row=num1, min_col=num2, values_only=True):
             row = list(row)
             if  row[12] == None :
                 continue
