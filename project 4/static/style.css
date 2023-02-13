@@ -1,0 +1,34 @@
+body{
+    background-image: url("cloud.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 20px;
+    font-family: 'Dancing Script', serif;
+}
+
+.top{
+    position: relative;
+    padding-top: 100px;
+    }
+
+h1{
+    font-family: 'Pacifico', serif;
+    font-size: 3em;
+    text-align:center;
+    color: #3C84AB;
+    }
+
+p{
+    text-align:center;
+}
+
+.content{
+    margin-left: 518.875px;
+    margin-right: 458.875px;
+}
+
+#task{
+    height:40px;
+    width: 300px;
+    margin-top:10px;
+}
