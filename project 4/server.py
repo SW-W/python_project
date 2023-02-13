@@ -13,7 +13,6 @@ def home():
         ind = int(pth.index("="))
         task = pth[ind+1:int(len(pth))]
         tasks.append(task)
-    print(tasks)
 
     if request.method == 'POST':
         done_item = request.form.get("task")
