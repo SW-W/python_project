@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <title>To-do list</title>
+</head>
+
+<body>
+    <div class="top">
+        <h1>To-do task</h1>
+        <p>Date: {{date}}</p>
+    </div>
+    <div class="content">
+        <form action = {{url_for('home')}} method="get">
+            <label for="task">Task</label>
+            <br>
+            <input type="text" id="task" name="task">
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <form action={{url_for('home')}}  method="post">
+            {% for task in tasks%}
+                <input type="checkbox" id={{task}} name="task" value={{task}}>
+                <label for={{task}}>{{task}}</label><br>
+            {% endfor %}
+            {% if len(tasks)>=1 %}
+            <input type="submit" value="Submit">
+            {% endif %}
+        </form>
+    </div>
+
+</body>
+</html>
